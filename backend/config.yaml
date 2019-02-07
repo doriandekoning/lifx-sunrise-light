@@ -1,0 +1,35 @@
+duration: 30
+lightid: 215938839704528
+updateinterval: 1 #Update interval in seconds
+initialcolor:
+  # Hue saturation brightness values 0-1000
+  hue: 543
+  saturation: 65535
+  brightness: 6553
+  # Value from 2500 to 9000
+  kelvin: 3000
+transitions:
+  - 
+    starttime: 0
+    endtime:  20
+    startvalue: 0
+    endvalue: 0.166
+    type: "hue"
+  - 
+    starttime: 0
+    endtime:  30
+    startvalue: 0.1
+    endvalue: 1
+    type: "brightness"
+  - 
+    starttime: 15
+    endtime:  30
+    startvalue: 1
+    endvalue: 0.2
+    type: "saturation"
+  - 
+    starttime: 0
+    endtime:  30
+    startvalue: 3000
+    endvalue: 3000
+    type: "kelvin"
