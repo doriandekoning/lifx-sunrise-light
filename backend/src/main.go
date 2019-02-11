@@ -34,7 +34,7 @@ func main() {
 }
 
 func wakeup(configLocation string) {
-	fmt.Println("Waking up!")
+	fmt.Println("Waking up!", time.Now())
 	config, err := ReadConfig(configLocation)
 	if err != nil {
 		panic(errors.Wrap(err, "Cannot read config in wakeup"))
