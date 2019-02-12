@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"time"
 
 	"flag"
@@ -14,6 +15,14 @@ import (
 )
 
 func main() {
+
+	location, err := time.LoadLocation("Europe/Amsterdam")
+	if err != nil {
+		log.Println("Unfortunately can't load a location")
+		log.Println(err)
+	} else {
+		gocron.ChangeLoc(location)
+	}
 
 	nocron := flag.Bool("nocron", false, "Do not run wake up in cron but run it immediately")
 	configLocation := flag.String("config", "config.yaml", "Location of the config file (default:config.yaml)")
